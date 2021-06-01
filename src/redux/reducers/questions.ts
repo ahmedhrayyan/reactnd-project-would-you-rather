@@ -1,3 +1,4 @@
+import { cloneDeep } from "lodash-es";
 import { AnyAction } from "redux";
 import { qTypes } from "../actions/questions";
 
@@ -11,7 +12,7 @@ function qReducer(state: QState = {}, action: AnyAction): QState {
       return { ...state, [action.question.id]: action.question };
     case qTypes.ANSWER_Q: {
       const { answer, qid, authedUser } = action.answer as StoreAnswer;
-      const clone = Object.assign({}, state);
+      const clone = cloneDeep(state);
       const question = clone[qid];
       question[answer].votes.push(authedUser);
       return clone;
