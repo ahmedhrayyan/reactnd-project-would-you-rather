@@ -1,7 +1,7 @@
 import { AnyAction } from "redux";
 import { userTypes } from "../actions/authedUser";
 
-export type AuthedUserState = string | null
+export type AuthedUserState = string | null;
 const defaultState: AuthedUserState = null;
 function authedUserReducer(
   state = defaultState,
@@ -9,7 +9,9 @@ function authedUserReducer(
 ): AuthedUserState {
   switch (action.type) {
     case userTypes.SET_AUTHED_USER:
-      return action.authedUser;
+      return action.id;
+    case userTypes.LOGOUT:
+      return null;
     default:
       return state;
   }
