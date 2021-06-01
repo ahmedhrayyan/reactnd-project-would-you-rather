@@ -59,8 +59,8 @@ const Header: FC<HeaderProps> = ({ expand = "md" }) => {
             textTransform="uppercase"
             textDecor="underline"
             fontWeight="bold"
-            fontSize="lg"
-            py="1"
+            fontSize="xl"
+            py="2"
           >
             wyr
           </Link>
@@ -68,18 +68,20 @@ const Header: FC<HeaderProps> = ({ expand = "md" }) => {
           <Box as="nav" d={{ base: "none", [expand]: "block" }}>
             <Nav direction="row" />
           </Box>
-          <Popover>
-            <PopoverTrigger>
-              <Button colorScheme="teal">{currUser?.name}</Button>
-            </PopoverTrigger>
-            <PopoverContent>
-              <PopoverBody>
-                <Button variant="link" py="1" w="100%" onClick={handleLogout}>
-                  Log out
-                </Button>
-              </PopoverBody>
-            </PopoverContent>
-          </Popover>
+          {!!currUser && (
+            <Popover>
+              <PopoverTrigger>
+                <Button colorScheme="teal">{currUser?.name}</Button>
+              </PopoverTrigger>
+              <PopoverContent>
+                <PopoverBody>
+                  <Button variant="link" py="1" w="100%" onClick={handleLogout}>
+                    Log out
+                  </Button>
+                </PopoverBody>
+              </PopoverContent>
+            </Popover>
+          )}
         </Flex>
         <Collapse in={isOpen} animateOpacity>
           <Box as="nav" display={{ [expand]: "none" }}>
