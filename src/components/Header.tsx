@@ -68,24 +68,18 @@ const Header: FC<HeaderProps> = ({ expand = "md" }) => {
           <Box as="nav" d={{ base: "none", [expand]: "block" }}>
             <Nav direction="row" />
           </Box>
-          {currUser ? (
-            <Popover>
-              <PopoverTrigger>
-                <Button colorScheme="teal">{currUser.name}</Button>
-              </PopoverTrigger>
-              <PopoverContent>
-                <PopoverBody>
-                  <Button variant="link" py="1" w="100%" onClick={handleLogout}>
-                    Log out
-                  </Button>
-                </PopoverBody>
-              </PopoverContent>
-            </Popover>
-          ) : (
-            <Button as={RLink} to="/login" colorScheme="teal">
-              Sign In
-            </Button>
-          )}
+          <Popover>
+            <PopoverTrigger>
+              <Button colorScheme="teal">{currUser?.name}</Button>
+            </PopoverTrigger>
+            <PopoverContent>
+              <PopoverBody>
+                <Button variant="link" py="1" w="100%" onClick={handleLogout}>
+                  Log out
+                </Button>
+              </PopoverBody>
+            </PopoverContent>
+          </Popover>
         </Flex>
         <Collapse in={isOpen} animateOpacity>
           <Box as="nav" display={{ [expand]: "none" }}>
