@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+# Would You Rather
+A web application that allows users to ask questions and answer others questions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Motivation
+This project is the final assessment project for Udacity's React & Redux course.
+
+## Tech stack
+The app tech stack includes:
+* webpack
+* HTML
+* css
+* JavaScript
+* React
+* Redux
+* React-Router
 
 ## Available Scripts
 
