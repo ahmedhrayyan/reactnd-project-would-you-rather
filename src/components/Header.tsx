@@ -40,7 +40,7 @@ const Header: FC<HeaderProps> = ({ expand = "md" }) => {
   }
 
   return (
-    <Box as="header">
+    <Box as="header" mb="10">
       <Container>
         <Flex py="3" align="center" justifyContent="space-between">
           <IconButton

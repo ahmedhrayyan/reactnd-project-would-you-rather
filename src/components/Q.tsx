@@ -78,7 +78,7 @@ const Q: FC<QProps> = ({ question }) => {
               <FormLabel as="legend" fontWeight="bold" mb="4">
                 Would You Rather:{" "}
               </FormLabel>
-              <RadioGroup>
+              <RadioGroup defaultValue="optionOne">
                 <VStack align="start">
                   <Radio value="optionOne" name="answer">
                     {question.optionOne.text}

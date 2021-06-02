@@ -13,7 +13,7 @@ const LoginPage: FC<{}> = () => {
   }
 
   return (
-    <Container as="main" maxW="container.sm" py="10">
+    <Container as="main" maxW="container.sm">
       <SignIn />
     </Container>
   );

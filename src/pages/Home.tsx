@@ -5,7 +5,7 @@ import QList from "../components/QList";
 interface HomeProps {}
 const Home: FC<HomeProps> = () => {
   return (
-    <Container as="main" maxW="container.md" mt="10">
+    <Container as="main" maxW="container.md">
       <QList />
     </Container>
   );

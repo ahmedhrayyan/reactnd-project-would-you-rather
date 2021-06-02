@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import PrivateRoute from "./components/privateRoute";
 import Home from "./pages/Home";
 import LoginPage from "./pages/LoginPage";
+import QPage from "./pages/QPage";
 import { getInitialData } from "./redux/actions/shared";
 import { useAppDispatch } from "./utils/hooks";
 
@@ -53,7 +54,7 @@ function App() {
           <h1>leaderboard</h1>
         </PrivateRoute>
         <PrivateRoute path="/questions/:id">
-          <h1>question page</h1>
+          <QPage />
         </PrivateRoute>
         <Route path="/login">
           <LoginPage />
