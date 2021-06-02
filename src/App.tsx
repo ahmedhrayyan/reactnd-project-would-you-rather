@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { Redirect, Route, Switch } from "react-router";
 import Header from "./components/Header";
 import PrivateRoute from "./components/privateRoute";
+import AddQ from "./pages/AddQ";
 import Home from "./pages/Home";
 import LoginPage from "./pages/LoginPage";
 import QPage from "./pages/QPage";
@@ -48,7 +49,7 @@ function App() {
           <Home />
         </PrivateRoute>
         <PrivateRoute path="/add">
-          <h1>add new</h1>
+          <AddQ />
         </PrivateRoute>
         <PrivateRoute path="/leaderboard">
           <h1>leaderboard</h1>
