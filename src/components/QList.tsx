@@ -21,14 +21,18 @@ const QList: FC<QListProps> = (props) => {
         <TabPanel>
           {Object.values(questions)
             .filter((q) => !Object.keys(currUser.answers).includes(q.id))
+            .sort((a, b) => b.timestamp - a.timestamp)
             .map((q) => (
               <QCompact question={q} />
             ))}
         </TabPanel>
         <TabPanel>
-          {Object.keys(currUser.answers).map((qid) => (
-            <QCompact question={questions[qid]} />
-          ))}
+          {Object.values(questions)
+            .filter((q) => Object.keys(currUser.answers).includes(q.id))
+            .sort((a, b) => b.timestamp - a.timestamp)
+            .map((q) => (
+              <QCompact question={q} />
+            ))}
         </TabPanel>
       </TabPanels>
     </Tabs>
