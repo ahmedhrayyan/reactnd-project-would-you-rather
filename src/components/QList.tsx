@@ -11,7 +11,7 @@ const QList: FC<QListProps> = (props) => {
   const questions = useAppSelector(({ questions }) => questions);
 
   return (
-    <Tabs>
+    <Tabs colorScheme="teal">
       <TabList mb="3">
         <Tab>Unanswered Questions</Tab>
         <Tab>Answered Questions</Tab>

@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { Redirect, Route, Switch } from "react-router";
 import Header from "./components/Header";
 import PrivateRoute from "./components/privateRoute";
+import Home from "./pages/Home";
 import LoginPage from "./pages/LoginPage";
 import { getInitialData } from "./redux/actions/shared";
 import { useAppDispatch } from "./utils/hooks";
@@ -43,7 +44,7 @@ function App() {
       <Header />
       <Switch>
         <PrivateRoute exact path="/">
-          <h1>homepage</h1>
+          <Home />
         </PrivateRoute>
         <PrivateRoute path="/add">
           <h1>add new</h1>
