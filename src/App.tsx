@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import PrivateRoute from "./components/privateRoute";
 import AddQ from "./pages/AddQ";
 import Home from "./pages/Home";
+import LeaderBoard from "./pages/LeaderBoard";
 import LoginPage from "./pages/LoginPage";
 import QPage from "./pages/QPage";
 import { getInitialData } from "./redux/actions/shared";
@@ -52,7 +53,7 @@ function App() {
           <AddQ />
         </PrivateRoute>
         <PrivateRoute path="/leaderboard">
-          <h1>leaderboard</h1>
+          <LeaderBoard />
         </PrivateRoute>
         <PrivateRoute path="/questions/:id">
           <QPage />
