@@ -23,7 +23,7 @@ const QList: FC<QListProps> = (props) => {
             .filter((q) => !Object.keys(currUser.answers).includes(q.id))
             .sort((a, b) => b.timestamp - a.timestamp)
             .map((q) => (
-              <QCompact question={q} />
+              <QCompact question={q} key={q.id} />
             ))}
         </TabPanel>
         <TabPanel>
@@ -31,7 +31,7 @@ const QList: FC<QListProps> = (props) => {
             .filter((q) => Object.keys(currUser.answers).includes(q.id))
             .sort((a, b) => b.timestamp - a.timestamp)
             .map((q) => (
-              <QCompact question={q} />
+              <QCompact question={q} key={q.id} />
             ))}
         </TabPanel>
       </TabPanels>

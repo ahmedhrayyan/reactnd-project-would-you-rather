@@ -13,7 +13,7 @@ const LeaderBoard: FC<LeaderBoardProps> = (props) => {
         .slice()
         .sort((a, b) => computeScore(b) - computeScore(a))
         .map((user) => (
-          <Leader user={user} />
+          <Leader user={user} key={user.id} />
         ))}
     </Container>
   );
