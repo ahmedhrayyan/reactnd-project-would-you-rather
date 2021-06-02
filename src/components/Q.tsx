@@ -113,6 +113,7 @@ const Q: FC<QProps> = ({ question }) => {
               {options.map((option, i) => (
                 <Box className={cx({ active: votedFor === option })} key={i}>
                   <CircularProgress
+                    color="teal"
                     value={(question[option].votes.length / votes) * 100}
                     size="60px"
                     me="3"
