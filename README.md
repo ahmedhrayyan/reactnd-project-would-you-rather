@@ -18,6 +18,10 @@ The app tech stack includes:
 
 In the project directory, you can run:
 
+### `npm install`
+
+Install required Node packages so you can run the project locally
+
 ### `npm start`
 
 Runs the app in the development mode.\
